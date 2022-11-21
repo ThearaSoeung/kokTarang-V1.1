@@ -1,0 +1,77 @@
+<!-- Main Container -->
+<main class="bg-[#16213E] px-6 md:px-20 py-16">
+    <!-- Global Container -->
+    <div class="">
+        <!-- Selecting -->
+        <section class="bg-white py-4 rounded-xl px-4">
+            <div class="">
+                <div class="flex justify-center space-x-10 ">
+
+                    <div>
+                        <div class=" hover:border-b-2 hover:border-[#0F3460] font-bold m-2 pb-1">Kok Tarang</div>        
+                    </div>
+                    <div>
+                        <div class=" hover:border-b-2 hover:border-[#0F3460] font-bold m-2 pb-1">Finding Opponents</div> 
+                    </div>
+                </div>
+
+                <!-- Sport & Time -->
+                <div class="border-t-2 pt-7 sm:flex sm:justify-center sm:space-x-16 grid sm:grid-cols-2">
+                    <!-- Sport Selction -->
+                    <div class="sm:flex items-center grid place-content-center">
+                        <mat-form-field>
+                            <mat-label>Choosing Sports</mat-label>
+                            <mat-select>
+                                <mat-option value="football">Football</mat-option>
+                                <mat-option value="basketball">Basketball</mat-option>
+                                <mat-option value="Volleyball">Volleyball</mat-option>
+                                <mat-option value="badminton">Badminton</mat-option>
+                                <mat-option value="tennis">Tennis</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- Date Selection -->
+                    <div class="grid place-content-center">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker" />
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Container -->
+        <section class="bg-white mt-8 rounded-xl p-4">
+            <section>
+                <div class="">
+                    <div class="font-semibold">Offers</div>
+                    <div class="font-thin text-sm pb-3">
+                        Promotions, deals and special offers for you
+                    </div>
+
+                    <!-- Offers -->
+                    <div class="flex justify-center">
+                        <img src="../../assets/thumnails.jpg" alt="">
+                    </div>
+
+                    <div class="mt-10 flex justify-center">
+                        <mat-tab-group>
+                            <mat-tab label="Football"></mat-tab>
+                            <mat-tab label="Volleyball"></mat-tab>
+                            <mat-tab label="Basketball"></mat-tab>
+                            <mat-tab label="Badminton"></mat-tab>
+                            <mat-tab label="Tennis"></mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </section>
+            <!-- Kok Taragn / Opponents -->
+           <app-tarang></app-tarang>
+        </section>
+    </div>
+</main>

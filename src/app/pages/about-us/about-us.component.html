@@ -1,0 +1,40 @@
+
+<div>
+
+    <div class="bg-[#16213E] p-4">
+    
+        <div class="text-white text-2xl md:text-4xl flex justify-center pt-5">Meet Our Teams</div>
+        <div class="text-white text-base md:text-lg pt-4 flex justify-center">
+            To make our goals succeed, we would like to introduce the main drivers behind of all this new driven idea.
+        </div>
+
+        
+    </div>
+    
+    <div class="=w-[100%] min-h-[70vh] bg-[#16213E] p-[50px] grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 place-items-center">
+        
+
+        <div *ngFor="let dev of developer">
+            <div class="sm:w-[500px] sm:h-[200px] bg-[#ffffff] rounded-lg shadow-xl flex-col sm:flex-row flex items-center gap-3 p-4 sm:pl-5 sm:pr-2">
+                <div class="min-w-[150px] h-[150px] bg-[green] overflow-hidden rounded-md">
+                    <img class="object-cover w-[100%] h-[100%]" [src]="dev.img" alt="" />
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="m-0 text-sky-500 ">{{ dev.name }}</h1>
+                    <h3 class="m-0 font-semibold ">{{ dev.position }}</h3>
+                    <p class="m-0">
+                        {{ dev.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+    
+
+
+
+
